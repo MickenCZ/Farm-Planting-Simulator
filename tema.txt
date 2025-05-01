@@ -1,0 +1,14 @@
+Farm planting simulator
+File API - loading/saving json state Localstorage
+then drag and drop for planting on a plot of land
+Canvas for background, svg for plants
+semantic tags: game section, seeds seciton, save/load section, (maybe geolocation with weather info section)
+header, footer, main, nav, aside, sectoin
+CSS transitions: ig on a submit button or something
+form: Either in-game economy, or settings to control growth speed, random events, rain etc.
+OOP: plant class and different other subclasses
+
+if need different pages, one for visulisation of data or something
+
+
+idea for svg - growth meter. contolled via js, události, tvorba, úpravy
