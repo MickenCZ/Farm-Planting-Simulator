@@ -12,7 +12,6 @@ export default class Plant {
         this.fg = fg
         this.createCrop()
         this.state.incrementPlantedCount()
-        this.harvested = false;
         this.growPlant()
 
         new State().addNewPlant(this)
@@ -48,16 +47,10 @@ export default class Plant {
                     this.cell.innerHTML = ''; 
                     this.cell.dataset.occupied = "false";
                     this.cell.classList.remove("grown")
-                    this.harvest()
-                });
+                    this.state.updateBalance(Math.round(this.seed.price * this.seed.margin))
+                    new State().removePlant(this)
+                    
+                }, {once: true});
         }}, this.seed.growthTickTime);
-    }
-
-    harvest() {
-        if (this.harvested === false) {
-            this.state.updateBalance(Math.round(this.seed.price * this.seed.margin))
-            this.harvested = true; // debouncing
-            new State().removePlant(this)
-        }
     }
 }
