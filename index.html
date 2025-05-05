@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Farm planting simulator</title>
   <link rel="stylesheet" href="styles.css">
-  <script type="module" src="js/farmloader.js" defer></script>
-  <script type="module" src="js/farmplotinteractions.js" defer></script>
-  <script type="module" src="js/tabs.js" defer></script>
+  <script type="module" src="js/farmloader.js"></script>
+  <script type="module" src="js/farmplotinteractions.js"></script>
+  <script type="module" src="js/tabs.js"></script>
+  <script type="module" src="js/settings.js"></script>
 </head>
 <body>
 	<header>Welcome back to your farm</header>
@@ -27,6 +28,15 @@
 				<span id="money"></span>
 				<span>$</span>
 			</div>
+			<div>
+				<span>Crops planted:</span>
+				<span id="cropsPlanted"></span>
+			</div>
+			<div>
+				<span>Total money made:</span>
+				<span id="totalMoneyMade"></span>
+				<span>$</span>
+			</div>
 		</section>
 	</main>
 	<footer>
@@ -37,6 +47,18 @@
 
 		<div id="settings" class="tab-content active">
 			<h3>Settings</h3>
+			<div id="settings-container">
+				<div>
+					<button id="save-game">Save game</button>
+					<button id="download-save">Download game</button>
+					<label for="save-file">Load game from downloaded save</label>
+					<br><input type="file" name="save-file" id="save-file" accept=".json,application/json">
+				</div>
+				<div>
+					<p>Games are loaded from browser saves automatically, even offline. Use the Save Game button for frequent saves and download button for carrying the game state over to another computer.</p>
+				</div>
+			</div>
+		
 		</div>
 		<div id="shop" class="tab-content">
 			<h3>Shop</h3>

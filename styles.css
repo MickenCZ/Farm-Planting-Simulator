@@ -23,7 +23,6 @@ main {
 	grid-gap: 1rem;
 	grid-template-columns: 1fr 2fr 1fr;
 	padding: 1rem;
-	width: 100vw;
 }
 
 main > section {
@@ -108,6 +107,7 @@ main > section {
 	background: white;
 	border-radius: 0 0 8px 8px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.05);
+	min-height: 300px;
 }
 
 .tab-content.active {
@@ -119,10 +119,41 @@ main > section {
 	background: #DDD;
 }
 
-#stats span {
-	font-size: 1.1rem;
+.tab-content button {
+	background-color: #7DA87B;
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	margin: 0.5rem 0;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1rem;
+	transition: background-color 0.3s ease;
+	display: block;
+	width: 100%;
+	max-width: 300px;
 }
 
+.tab-content button:hover {
+	background-color: #6a956a;
+}
+
+.tab-content p {
+	font-size: 1.1rem;
+	color: #555;
+	line-height: 1.4;
+	max-width: 300px;
+}
+
+#settings-container {
+	display: flex;
+	gap: 50px;
+}
+
+
+#stats span, label {
+	font-size: 1.1rem;
+}
 
 @media only screen and (max-width: 1000px) {
 	#game-grid {

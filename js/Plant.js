@@ -11,6 +11,7 @@ export default class Plant {
         this.svg = svg
         this.fg = fg
         this.createCrop()
+        this.state.incrementPlantedCount()
         this.harvested = false;
         this.growPlant()
     }

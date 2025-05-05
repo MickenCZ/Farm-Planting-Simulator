@@ -30,5 +30,5 @@ for (let i = 0; i < 49; i++) {
     gameGrid.appendChild(cell);
 }
 
-//load money
+//load state like money
 new State()
