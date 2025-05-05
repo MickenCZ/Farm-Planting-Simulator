@@ -4,7 +4,8 @@ class State { // singleton pattern
             return State.instance
         }
         //actual constructor logic
-        this.money = 0;
+        this.money = 30;
+        document.getElementById("money").innerText = this.money;
         //return new instance (only called once)
         State.instance = this;
         return this;

@@ -1,21 +1,23 @@
 import makeGrowthSvg from "./growthmeter.js"
 import State from "./state.js"
+import config from "./config.js"
 
 export default class Plant {
     constructor(cell, seedType) { 
         this.cell = cell
-        this.seedType = seedType
+        this.seed = config.seeds.find(seed => seed.name === seedType)
         const {svg, fg} = makeGrowthSvg()
         this.svg = svg
         this.fg = fg
         this.createCrop()
+        this.harvested = false;
     }
 
     createCrop() {// creating the actual image and circle
         this.cell.dataset.occupied = "true";
 
         const img = document.createElement("img")
-        img.src = `images/${this.seedType}.png`
+        img.src = `images/${this.seed.name}.png`
         this.cell.appendChild(img)
 
         // append growth circle
@@ -44,8 +46,10 @@ export default class Plant {
     }
 
     harvest() {
-        console.log("asd")
-        const state = new State()
-        state.updateBalance(7)
+        if (this.harvested === false) {
+            const state = new State()
+            state.updateBalance(this.seed.price)
+            this.harvested = true; // debouncing
+        }
     }
 }
