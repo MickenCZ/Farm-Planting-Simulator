@@ -1,11 +1,10 @@
 class State { // singleton pattern
     constructor() {
-        if (State.instace) {
-            return State.instace
+        if (State.instance) {
+            return State.instance
         }
         //actual constructor logic
         this.money = 0;
-        this.moneyTag = document.getElementById("money");
         //return new instance (only called once)
         State.instance = this;
         return this;
@@ -14,7 +13,7 @@ class State { // singleton pattern
     updateBalance(amount) {
         if (this.money + amount < 0) {return false}
         this.money += amount;
-        this.moneyTag.innerText = amount;
+        document.getElementById("money").innerText = this.money;
         return true;
     }
 }
