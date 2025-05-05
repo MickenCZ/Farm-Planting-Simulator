@@ -14,6 +14,8 @@ export default class Plant {
         this.state.incrementPlantedCount()
         this.harvested = false;
         this.growPlant()
+
+        new State().addNewPlant(this)
     }
 
     createCrop() {// creating the actual image and circle
@@ -55,6 +57,7 @@ export default class Plant {
         if (this.harvested === false) {
             this.state.updateBalance(Math.round(this.seed.price * this.seed.margin))
             this.harvested = true; // debouncing
+            new State().removePlant(this)
         }
     }
 }

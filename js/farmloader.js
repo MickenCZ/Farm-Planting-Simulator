@@ -27,6 +27,7 @@ for (let i = 0; i < 49; i++) {
     const cell = document.createElement("div");
     cell.classList.add("cell");
     cell.dataset.occupied = "false";
+    cell.dataset.id = i;
     gameGrid.appendChild(cell);
 }
 

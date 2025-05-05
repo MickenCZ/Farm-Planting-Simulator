@@ -11,6 +11,7 @@ export default class State {
         document.getElementById("money").innerText = this.money;
         document.getElementById("cropsPlanted").innerText = this.cropsPlanted;
         document.getElementById("totalMoneyMade").innerText = this.totalMoneyMade;
+        this.plants = []
 
         //return new instance (only called once)
         State.instance = this;
@@ -48,5 +49,14 @@ export default class State {
         document.getElementById("money").innerText = this.money;
         document.getElementById("cropsPlanted").innerText = this.cropsPlanted;
         document.getElementById("totalMoneyMade").innerText = this.totalMoneyMade;
+    }
+
+    addNewPlant(plant) {
+        this.plants.push(plant)
+        console.log(this.plants)
+    }
+
+    removePlant(passedPlant) {
+        this.plants = this.plants.filter(plant => plant != passedPlant)
     }
 }
