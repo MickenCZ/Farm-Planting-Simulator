@@ -30,5 +30,10 @@ for (let i = 0; i < 49; i++) {
     gameGrid.appendChild(cell);
 }
 
-//load state like money
-new State()
+//load default state
+const saveGame = localStorage.getItem("save")
+if (saveGame == null) {
+    new State()
+} else {
+    new State().fromJson(JSON.parse(saveGame))
+}

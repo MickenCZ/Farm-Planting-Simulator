@@ -40,4 +40,13 @@ export default class State {
             field: field.innerHTML
         }
     }
+
+    fromJson(obj) {
+        this.money = obj.money;
+        this.cropsPlanted = obj.cropsPlanted;
+        this.totalMoneyMade = obj.totalMoneyMade;
+        document.getElementById("money").innerText = this.money;
+        document.getElementById("cropsPlanted").innerText = this.cropsPlanted;
+        document.getElementById("totalMoneyMade").innerText = this.totalMoneyMade;
+    }
 }
