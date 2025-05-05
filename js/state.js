@@ -1,3 +1,5 @@
+import Plant from "./Plant.js";
+
 export default class State { 
     constructor() {
         if (State.instance) { // singleton pattern
@@ -19,12 +21,10 @@ export default class State {
     }
 
     updateBalance(amount) {
-        if (this.money + amount < 0) {return false}
         if (amount > 0) {this.totalMoneyMade += amount}
         this.money += amount;
         document.getElementById("money").innerText = this.money;
         document.getElementById("totalMoneyMade").innerText = this.totalMoneyMade;
-        return true;
     }
 
     incrementPlantedCount() {
@@ -33,12 +33,11 @@ export default class State {
     }
 
     toJson() {
-        const field = document.getElementById("game-grid")
         return {
             money: this.money,
             cropsPlanted: this.cropsPlanted,
             totalMoneyMade: this.totalMoneyMade,
-            field: field.innerHTML
+            plants: this.plants.map(plant => plant.toJson())
         }
     }
 
@@ -49,6 +48,12 @@ export default class State {
         document.getElementById("money").innerText = this.money;
         document.getElementById("cropsPlanted").innerText = this.cropsPlanted;
         document.getElementById("totalMoneyMade").innerText = this.totalMoneyMade;
+        obj.plants.forEach( plant => {
+            const cell = Array.from(document.querySelectorAll(".cell"))
+            .find(tag => tag.dataset.id == plant.cellId)
+            
+            this.plants.push(new Plant(cell, plant.seedType, plant.growth))
+        })
     }
 
     addNewPlant(plant) {

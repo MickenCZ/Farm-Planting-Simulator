@@ -1,4 +1,6 @@
+import config from "./config.js"
 import Plant from "./Plant.js"
+import State from "./state.js"
 
 // save seed data on dragging
 document.querySelectorAll(".seed").forEach(seed => {
@@ -12,7 +14,8 @@ document.querySelectorAll(".cell").forEach(cell => {
 
     cell.addEventListener("drop", (e) => {
         const seedType = e.dataTransfer.getData("seedType")
-        if (cell.dataset.occupied == "false") {
+        const seedPrice = config.seeds.find(seed => seed.name == seedType).price;
+        if (cell.dataset.occupied == "false" && new State().money >= seedPrice) {
             new Plant(cell, seedType) // creates it on the field
         }
     });
