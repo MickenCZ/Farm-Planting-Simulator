@@ -183,5 +183,8 @@ main > section {
 	#game-grid {
 		--tile-length: 40px;
 	}
+	#settings-container {
+		flex-direction: column;
+	}
 }
 

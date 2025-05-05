@@ -5,7 +5,7 @@ Canvas for background, svg for plants
 semantic tags: game section, seeds seciton, save/load section, (maybe geolocation with weather info section)
 header, footer, main, nav, aside, sectoin
 CSS transitions: ig on a submit button or something
-    CSS animations  
+    CSS animations, 2D 3D transformace
     form: Either in-game economy, or settings to control growth speed, random events, rain etc.
 OOP: plant class and different other subclasses
 history api - settings and shop pages
