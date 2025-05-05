@@ -119,6 +119,10 @@ main > section {
 	background: #DDD;
 }
 
+#stats span {
+	font-size: 1.1rem;
+}
+
 
 @media only screen and (max-width: 1000px) {
 	#game-grid {

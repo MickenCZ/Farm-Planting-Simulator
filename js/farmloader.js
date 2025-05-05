@@ -1,4 +1,5 @@
 import config from "./config.js"
+import State from "./state.js"
 
 const {seeds} = config
 
@@ -28,3 +29,6 @@ for (let i = 0; i < 49; i++) {
     cell.dataset.occupied = "false";
     gameGrid.appendChild(cell);
 }
+
+//load money
+new State()

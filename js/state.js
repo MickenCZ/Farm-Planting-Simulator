@@ -1,11 +1,13 @@
-class State { // singleton pattern
+export default class State { 
     constructor() {
-        if (State.instance) {
+        if (State.instance) { // singleton pattern
             return State.instance
         }
+
         //actual constructor logic
         this.money = 30;
         document.getElementById("money").innerText = this.money;
+        
         //return new instance (only called once)
         State.instance = this;
         return this;
@@ -18,7 +20,3 @@ class State { // singleton pattern
         return true;
     }
 }
-
-//maybe a class with observer pattern, singleton class 
-
-export default State

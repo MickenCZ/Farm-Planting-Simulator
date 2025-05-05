@@ -3,7 +3,8 @@ import State from "./state.js"
 import config from "./config.js"
 
 export default class Plant {
-    constructor(cell, seedType) { 
+    constructor(cell, seedType) {
+        this.state = new State() 
         this.cell = cell
         this.seed = config.seeds.find(seed => seed.name === seedType)
         const {svg, fg} = makeGrowthSvg()
@@ -11,9 +12,11 @@ export default class Plant {
         this.fg = fg
         this.createCrop()
         this.harvested = false;
+        this.growPlant()
     }
 
     createCrop() {// creating the actual image and circle
+        if (this.seed.price > this.state.money) {return}
         this.cell.dataset.occupied = "true";
 
         const img = document.createElement("img")
@@ -22,9 +25,11 @@ export default class Plant {
 
         // append growth circle
         this.cell.appendChild(this.svg);
+
+        this.state.updateBalance(-this.seed.price)
     }
 
-    growPlant(growthStageTime) { // animating the circle, calling harvest when finished and clicked
+    growPlant() { // animating the circle, calling harvest when finished and clicked
         const circleRadius = 26; // found in growthmeter.js svg
         let growth = 0;
         const grow = setInterval(() => {
@@ -42,13 +47,12 @@ export default class Plant {
                     this.cell.classList.remove("grown")
                     this.harvest()
                 });
-        }}, growthStageTime);
+        }}, this.seed.growthTickTime);
     }
 
     harvest() {
         if (this.harvested === false) {
-            const state = new State()
-            state.updateBalance(this.seed.price)
+            this.state.updateBalance(Math.round(this.seed.price * this.seed.margin))
             this.harvested = true; // debouncing
         }
     }

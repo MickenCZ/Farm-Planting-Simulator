@@ -13,8 +13,7 @@ document.querySelectorAll(".cell").forEach(cell => {
     cell.addEventListener("drop", (e) => {
         const seedType = e.dataTransfer.getData("seedType")
         if (cell.dataset.occupied == "false") {
-            const plant = new Plant(cell, seedType)
-            plant.growPlant(500)
+            new Plant(cell, seedType) // creates it on the field
         }
     });
 })
