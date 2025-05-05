@@ -1,11 +1,24 @@
-const state = {
-    seeds: [
-        {name: "Wheat", price: 10, image: "images/wheat.png"},
-        {name: "Corn", price: 50, image: "images/corn.png"},
-        {name: "Carrot", price: 200, image: "images/carrot.png"},
-    ],
-    money: 0
-    
+class State { // singleton pattern
+    constructor() {
+        if (State.instace) {
+            return State.instace
+        }
+        //actual constructor logic
+        this.money = 0;
+        this.moneyTag = document.getElementById("money");
+        //return new instance (only called once)
+        State.instance = this;
+        return this;
+    }
+
+    updateBalance(amount) {
+        if (this.money + amount < 0) {return false}
+        this.money += amount;
+        this.moneyTag.innerText = amount;
+        return true;
+    }
 }
 
-export default state
+//maybe a class with observer pattern, singleton class 
+
+export default State

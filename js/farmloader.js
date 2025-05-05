@@ -1,5 +1,6 @@
-import state from "./state.js"
-const {seeds} = state
+import config from "./config.js"
+
+const {seeds} = config
 
 const seedsContainer = document.getElementById("seeds")
 const gameGrid = document.getElementById("game-grid")

@@ -1,4 +1,5 @@
 import makeGrowthSvg from "./growthmeter.js"
+import State from "./state.js"
 
 export default class Plant {
     constructor(cell, seedType) { 
@@ -44,5 +45,7 @@ export default class Plant {
 
     harvest() {
         console.log("asd")
+        const state = new State()
+        state.updateBalance(7)
     }
 }
