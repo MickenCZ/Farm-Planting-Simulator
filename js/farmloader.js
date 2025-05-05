@@ -10,7 +10,7 @@ const seedsHTML = seeds.map(seed => {
     return `<div class="seedWrapper">
         <span>${s(seed.name)}</span>
         <span>${s(seed.price)}$</span>
-        <img src=${s(seed.image)} draggable="true" class="seed" data-seed-type="${s(seed.name)}">
+        <img src=${s(seed.image)} draggable="true" class="seed" data-seed-type=${s(seed.name)} alt=${s(seed.name)}">
     </div>`
 })
 

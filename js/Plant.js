@@ -3,7 +3,7 @@ import State from "./state.js"
 import config from "./config.js"
 
 export default class Plant {
-    constructor(cell, seedType, growth = 0) {
+    constructor(cell, seedType, growth = 0) { // we need option to initialise with non0 growth for loading saves
         this.state = new State() 
         this.growth = growth
         this.cell = cell
@@ -24,6 +24,7 @@ export default class Plant {
 
         const img = document.createElement("img")
         img.src = `images/${this.seed.name}.png`
+        img.alt = this.seed.name
         this.cell.appendChild(img)
 
         // append this.growth circle
@@ -52,13 +53,13 @@ export default class Plant {
                     this.state.updateBalance(Math.round(this.seed.price * this.seed.margin))
                     new State().removePlant(this)
                     
-                }, {once: true});
+                }, {once: true}); // will delete itself after clicking once, fantastic option
         }}, this.seed.growthTickTime);
     }
 
     toJson() {
         return {
-            cellId: this.cell.dataset.id,
+            cellId: this.cell.dataset.id, //it doesnt store the thml tag but the id, careful
             seedType: this.seed.name,
             growth: this.growth
         }

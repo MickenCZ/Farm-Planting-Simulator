@@ -49,16 +49,15 @@ export default class State {
         document.getElementById("cropsPlanted").innerText = this.cropsPlanted;
         document.getElementById("totalMoneyMade").innerText = this.totalMoneyMade;
         obj.plants.forEach( plant => {
-            const cell = Array.from(document.querySelectorAll(".cell"))
-            .find(tag => tag.dataset.id == plant.cellId)
-            
+            //json in localstorage stores id of cell, not the tag, so we have to find it. (find = filter[0])
+            const cell = Array.from(document.querySelectorAll(".cell")).find(tag => tag.dataset.id == plant.cellId)
+
             this.plants.push(new Plant(cell, plant.seedType, plant.growth))
         })
     }
 
     addNewPlant(plant) {
         this.plants.push(plant)
-        console.log(this.plants)
     }
 
     removePlant(passedPlant) {
