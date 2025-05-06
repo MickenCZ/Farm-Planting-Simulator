@@ -22,4 +22,3 @@ or like notifs at cursor like floating text
 taky offline ať funguje
 
 NEED: TRANSITION ANIMATION, maybe on seed hover?
-make disable animation button use localstorage

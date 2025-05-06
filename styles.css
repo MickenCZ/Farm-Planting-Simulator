@@ -20,6 +20,7 @@ header {
 	align-items: center;
 	justify-content: center;
 	gap: 20px;
+	perspective: 200px;
 }
 
 @keyframes spin {
@@ -29,6 +30,7 @@ header {
 
 .spin {
 	animation: spin 10s linear infinite;
+	transform-style: preserve-3d;
 }
 
 #farm {
@@ -62,6 +64,12 @@ main > section {
 	width: 32px;
 	height: 32px;
 	cursor: grab;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.seedWrapper > img:hover {
+	transform: scale(1.3) rotate(5deg);
+	opacity: 0.8;
 }
 
 #game-grid {
