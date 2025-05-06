@@ -38,3 +38,9 @@ if (saveGame == null) {
 } else {
     new State().fromJson(JSON.parse(saveGame))
 }
+
+//load logo animation
+const disabledAnimation = localStorage.getItem("disabledAnimation")
+if (disabledAnimation != "true") {
+    document.getElementById("farm").classList.add("spin")
+}

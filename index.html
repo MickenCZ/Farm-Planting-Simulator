@@ -8,10 +8,11 @@
   <script type="module" src="js/farmloader.js"></script>
   <script type="module" src="js/farmplotinteractions.js"></script>
   <script type="module" src="js/tabs.js"></script>
+  <script type="module" src="js/saving.js"></script>
   <script type="module" src="js/settings.js"></script>
 </head>
 <body>
-	<header>Welcome back to your farm</header>
+	<header><img src="images/farm.png" alt="farm" id="farm">Welcome back to your farm</header>
 	<main>
 		<section id="seed-shop">
 			<h2 class="section-heading">Seed Shop</h2>
@@ -42,12 +43,18 @@
 	<footer>
 		<div id="tabs">
 			<div class="settings-tab tab active" data-tab="settings">Settings</div>
-			<div class="shop-tab tab" data-tab="shop">Shop</div>
+			<div class="saveload-tab tab" data-tab="saveload">Save / Load</div>
 		</div>
 
 		<div id="settings" class="tab-content active">
 			<h3>Settings</h3>
-			<div id="settings-container">
+			<div id="animation-options">
+				<button id="toggleAnimations">Enable/Disable logo animation</button>
+			</div>
+		</div>
+		<div id="saveload" class="tab-content">
+			<h3>Save / Load</h3>
+			<div id="saveload-container">
 				<div>
 					<button id="save-game">Save game</button>
 					<button id="download-save">Download game</button>
@@ -58,10 +65,6 @@
 					<p>Games are loaded from browser saves automatically, even offline. Use the Save Game button for frequent saves and download button for carrying the game state over to another computer.</p>
 				</div>
 			</div>
-		
-		</div>
-		<div id="shop" class="tab-content">
-			<h3>Shop</h3>
 		</div>
 	</footer>
 </body>
