@@ -1,5 +1,5 @@
 import makegrowthSvg from "./growthmeter.js"
-import State from "./state.js"
+import State from "./State.js"
 import config from "./config.js"
 
 export default class Plant {
