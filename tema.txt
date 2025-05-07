@@ -26,4 +26,15 @@ form for setting username
 maybe merge with other settings to make visual config localstorage entry with an object
 make the actual game better, more seeds, better gameplay, 
 
-maybe rozdělit css do víc souborů a složky
+check online state with js but nothing more, skip it like canvas¨
+
+HLAVNí: Formulář, použití knihovny, média JS a html (loop hudby v settings)
+
+pak dokumentace, pořádně otestovat včetně použvíání settings
+
+podívej se na ins discord
+
+termín odevzdání: 1.6.
+odevzdání přes link, je worth it to odevzdfávat brzo
+
+stačí říct, že live server to jde pustit
