@@ -48,3 +48,9 @@ if (disabledAnimation != "true") {
 
 //load internetstate
 renderInternetState()
+
+// load name
+const name = localStorage.getItem("name")
+if (name) {
+    document.getElementById("name-tag").innerText = ", " + name
+}

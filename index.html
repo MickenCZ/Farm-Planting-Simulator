@@ -15,7 +15,7 @@
   <script type="module" src="js/farmloader.js"></script>
 </head>
 <body>
-	<header><img src="images/farm.png" alt="farm" id="farm">Welcome back to your farm</header>
+	<header><img src="images/farm.png" alt="farm" id="farm">Welcome back to your farm<span id="name-tag"></span></header>
 	<main>
 		<section id="seed-shop">
 			<h2 class="section-heading">Seed Shop</h2>
@@ -54,6 +54,10 @@
 			<div id="animation-options">
 				<div><span>You are: </span><span id="internetState"></span></div>
 				<button id="toggleAnimations">Enable/Disable logo animation</button>
+				<label for="username">Write your name: </label><br>
+				<input type="text" id="name" placeholder="František Vomáčka" autofocus>
+				<button id="save-name">Save name</button>
+				<button id="reset-name">Reset name</button>
 			</div>
 		</div>
 		<div id="saveload" class="tab-content">

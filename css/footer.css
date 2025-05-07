@@ -49,6 +49,15 @@
 	background-color: #6a956a;
 }
 
+
+#reset-name {
+	background-color: #cc3545;
+}
+
+#reset-name:hover {
+	background-color: #a32733;
+}
+
 .tab-content p {
 	font-size: 1.1rem;
 	color: #555;
@@ -69,4 +78,22 @@
 	#settings-container {
 		flex-direction: column;
 	}
+}
+
+#name {
+	width: 100%;
+	max-width: 300px;
+	padding: 0.5rem;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	font-size: 1rem;
+	box-sizing: border-box;
+	margin: 0.5rem 0;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#name:focus {
+	border-color: #7DA87B;
+	box-shadow: 0 0 5px rgba(125, 168, 123, 0.5);
+	outline: none;
 }
