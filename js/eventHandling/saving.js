@@ -1,4 +1,4 @@
-import State from "./state.js"
+import State from "../state.js"
 
 document.getElementById("save-game").addEventListener("click", () => {
     const state = new State().toJson()
