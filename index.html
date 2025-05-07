@@ -7,11 +7,12 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/gamegrid.css">
   <link rel="stylesheet" href="css/main.css">
-  <script type="module" src="js/farmloader.js"></script>
   <script type="module" src="js/eventHandling/farmplotinteractions.js"></script>
   <script type="module" src="js/eventHandling/tabs.js"></script>
   <script type="module" src="js/eventHandling/saving.js"></script>
   <script type="module" src="js/eventHandling/settings.js"></script>
+  <script type="module" src="js/eventHandling/internet.js"></script>
+  <script type="module" src="js/farmloader.js"></script>
 </head>
 <body>
 	<header><img src="images/farm.png" alt="farm" id="farm">Welcome back to your farm</header>
@@ -51,6 +52,7 @@
 		<div id="settings" class="tab-content active">
 			<h3>Settings</h3>
 			<div id="animation-options">
+				<div><span>You are: </span><span id="internetState"></span></div>
 				<button id="toggleAnimations">Enable/Disable logo animation</button>
 			</div>
 		</div>

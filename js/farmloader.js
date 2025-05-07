@@ -1,4 +1,5 @@
 import config from "./config.js"
+import renderInternetState from "./eventHandling/internet.js"
 import State from "./state.js"
 
 const {seeds} = config
@@ -44,3 +45,6 @@ const disabledAnimation = localStorage.getItem("disabledAnimation")
 if (disabledAnimation != "true") {
     document.getElementById("farm").classList.add("spin")
 }
+
+//load internetstate
+renderInternetState()
