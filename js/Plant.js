@@ -3,7 +3,7 @@ import State from "./State.js"
 import config from "./config.js"
 
 export default class Plant {
-    constructor(cell, seedType, growth = 0) { // we need option to initialise with non0 growth for loading saves
+    constructor(cell, seedType, isFromSave = false, growth = 0) { // we need option to initialise with non0 growth for loading saves
         this.state = new State() 
         this.growth = growth
         this.cell = cell
@@ -11,14 +11,18 @@ export default class Plant {
         const {svg, fg} = makegrowthSvg()
         this.svg = svg
         this.fg = fg
-        this.createCrop()
+        if (!isFromSave) {
+            this.createCropNormal()
+        } else {
+            this.createCropFromSave()
+        }
         this.growPlant()
 
         new State().addNewPlant(this)
     }
 
 
-    createCrop() {// creating the actual image and circle
+    createCropNormal() {// creating the actual image and circle
         if (this.seed.price > this.state.money) {return}
         this.cell.dataset.occupied = "true";
 
@@ -34,6 +38,19 @@ export default class Plant {
         this.state.incrementPlantedCount()
         
     }
+
+    createCropFromSave() {// just ui, everything else is loaded
+        this.cell.dataset.occupied = "true";
+
+        const img = document.createElement("img")
+        img.src = `images/${this.seed.name}.png`
+        img.alt = this.seed.name
+        this.cell.appendChild(img)
+
+        // append this.growth circle
+        this.cell.appendChild(this.svg);
+    }
+
 
     growPlant() { // animating the circle, calling harvest when finished and clicked
         const circleRadius = 26; // found in growthmeter.js svg

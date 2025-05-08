@@ -1,10 +1,7 @@
 Farm planting simulator
 
-pak dokumentace, pořádně otestovat včetně použvíání settings a loading atd.
+pak dokumentace
 docs should mention the library
-
-
-
 
 termín odevzdání: 1.6.
 odevzdání přes link, je worth it to odevzdfávat brzo
