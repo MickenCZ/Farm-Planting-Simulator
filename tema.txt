@@ -1,28 +1,16 @@
 Farm planting simulator
-File API - loading/saving json state Localstorage
-then drag and drop for planting on a plot of land
-Canvas for background, svg for plants
-semantic tags: game section, seeds seciton, save/load section, (maybe geolocation with weather info section)
-header, footer, main, nav, aside, sectoin
-CSS transitions: ig on a submit button or something
-CSS animations, 2D 3D transformace
-    form: Either in-game economy, or settings to control growth speed, random events, rain etc.
-OOP: plant class and different other subclasses
-history api - settings and shop pages
-https://docs.google.com/spreadsheets/d/18rSiofsqOHGTXj_Zbs1s-rtB2URXG4iUmxn_5JtwWDY/edit?gid=0#gid=0
-2D and 3D transformations, animations
-check internet state with js
 
 and maybe toast for money
-or like notifs at cursor like floating text
+použití knihovny, including form validation
 
 make the actual game better, more seeds, better gameplay, 
 
-HLAVNí: použití knihovny, média JS a html (loop hudby v settings)
 
 pak dokumentace, pořádně otestovat včetně použvíání settings
+docs should mention the library
 
-podívej se na ins discord
+
+
 
 termín odevzdání: 1.6.
 odevzdání přes link, je worth it to odevzdfávat brzo

@@ -1,8 +1,13 @@
-import State from "../state.js"
+import State from "../State.js"
 
 document.getElementById("save-game").addEventListener("click", () => {
     const state = new State().toJson()
     localStorage.setItem("save", JSON.stringify(state))
+    Toastify({
+        text: "Game saved",
+        duration: 2000,
+        close: true
+    }).showToast()
 })
 
 document.getElementById("download-save").addEventListener("click", () => {
