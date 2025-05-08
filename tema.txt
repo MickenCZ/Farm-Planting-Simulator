@@ -1,8 +1,0 @@
-Farm planting simulator
-
-pak dokumentace
-docs should mention the library
-
-termín odevzdání: 1.6.
-odevzdání přes link, je worth it to odevzdfávat brzo
-stačí říct, že live server to jde pustit
