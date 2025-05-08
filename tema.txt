@@ -1,12 +1,6 @@
 Farm planting simulator
 
-and maybe toast for money
-použití knihovny, including form validation
-
-make the actual game better, more seeds, better gameplay, 
-
-
-pak dokumentace, pořádně otestovat včetně použvíání settings
+pak dokumentace, pořádně otestovat včetně použvíání settings a loading atd.
 docs should mention the library
 
 
@@ -14,11 +8,4 @@ docs should mention the library
 
 termín odevzdání: 1.6.
 odevzdání přes link, je worth it to odevzdfávat brzo
-
 stačí říct, že live server to jde pustit
-
-validace formuláře jakkoliv, i přes js
-notification library maybe when clicking buttons
-and maybe on validation
-
-Either message at cursor or general toast in the corner

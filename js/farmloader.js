@@ -1,6 +1,6 @@
 import config from "./config.js"
 import renderInternetState from "./eventHandling/internet.js"
-import State from "./state.js"
+import State from "./State.js"
 
 const {seeds} = config
 
@@ -46,7 +46,7 @@ if (disabledAnimation != "true") {
     document.getElementById("farm").classList.add("spin")
 }
 
-//load internetstate
+//load internet state
 renderInternetState()
 
 // load name

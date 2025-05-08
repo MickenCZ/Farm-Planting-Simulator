@@ -1,6 +1,6 @@
 import config from "../config.js"
 import Plant from "../Plant.js"
-import State from "../state.js"
+import State from "../State.js"
 
 // save seed data on dragging
 document.querySelectorAll(".seed").forEach(seed => {
