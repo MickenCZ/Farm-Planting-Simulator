@@ -54,3 +54,6 @@ const name = localStorage.getItem("name")
 if (name) {
     document.getElementById("name-tag").innerText = ", " + name
 }
+
+//use media api to play video
+document.getElementById("saveVideo").play()

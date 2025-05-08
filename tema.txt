@@ -16,28 +16,21 @@ check internet state with js
 and maybe toast for money
 or like notifs at cursor like floating text
 
-
-think about sound or video
-
-form for setting username
-maybe merge with other settings to make visual config localstorage entry with an object
 make the actual game better, more seeds, better gameplay, 
 
-HLAVNí: Formulář, použití knihovny, média JS a html (loop hudby v settings)
+HLAVNí: použití knihovny, média JS a html (loop hudby v settings)
 
 pak dokumentace, pořádně otestovat včetně použvíání settings
-
-
 
 podívej se na ins discord
 
 termín odevzdání: 1.6.
 odevzdání přes link, je worth it to odevzdfávat brzo
 
-stačí říct, že live server to jde pustit¨
-
+stačí říct, že live server to jde pustit
 
 validace formuláře jakkoliv, i přes js
-
 notification library maybe when clicking buttons
 and maybe on validation
+
+Either message at cursor or general toast in the corner

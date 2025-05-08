@@ -97,3 +97,7 @@
 	box-shadow: 0 0 5px rgba(125, 168, 123, 0.5);
 	outline: none;
 }
+
+#saveVideo {
+	width: 100%;
+}
